@@ -1,24 +1,24 @@
 class Knowns < Formula
 desc "AI-first CLI for task management and documentation"
 homepage "https://cli.knowns.dev"
-version "0.12.1"
+version "0.12.2"
 license "MIT"
 
 on_macos do
   on_arm do
-    url "https://github.com/knowns-dev/knowns/releases/download/v0.12.1/knowns-darwin-arm64.tar.gz"
-    sha256 "783d5ec688f02e652b43f7fdb9044fefe1aa9782afd8629cb98e33c402eabde2"
+    url "https://github.com/knowns-dev/knowns/releases/download/v0.12.2/knowns-darwin-arm64.tar.gz"
+    sha256 "fbc1da4ed9dd291201f2d5a261e22f571407d107f2eef20db19172caa9b40a83"
   end
   on_intel do
-    url "https://github.com/knowns-dev/knowns/releases/download/v0.12.1/knowns-darwin-x64.tar.gz"
-    sha256 "aaccaf55de384511ef7c07df61eb6a4ecc48145595591dcce8640def78e3ff0c"
+    url "https://github.com/knowns-dev/knowns/releases/download/v0.12.2/knowns-darwin-x64.tar.gz"
+    sha256 "2b2d11940d2e551b7bcd4b38cff0417ff7f9ab8b994af31bfdefecc177f5e39b"
   end
 end
 
 on_linux do
   on_intel do
-    url "https://github.com/knowns-dev/knowns/releases/download/v0.12.1/knowns-linux-x64.tar.gz"
-    sha256 "8cb93e9a38ce9449dff9e2dd0d2e91ca68af065441bb01ef143651c6adab77e2"
+    url "https://github.com/knowns-dev/knowns/releases/download/v0.12.2/knowns-linux-x64.tar.gz"
+    sha256 "7f467f167264879bf653614a8f2e4f1fba220da26116199b52eb4a9a785810a0"
   end
 end
 
