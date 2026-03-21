@@ -23,13 +23,7 @@ class Knowns < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "knowns-darwin-arm64" => "knowns"
-    elsif OS.mac? && Hardware::CPU.intel?
-      bin.install "knowns-darwin-x64" => "knowns"
-    elsif OS.linux? && Hardware::CPU.intel?
-      bin.install "knowns-linux-x64" => "knowns"
-    end
+    bin.install "knowns"
     bin.install_symlink "knowns" => "kn"
   end
 
