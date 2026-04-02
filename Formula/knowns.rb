@@ -1,24 +1,24 @@
 class Knowns < Formula
   desc "The memory layer for AI-native software development"
   homepage "https://knowns.sh"
-  version "0.16.3"
+  version "0.17.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/knowns-dev/knowns/releases/download/v0.16.3/knowns-darwin-arm64.tar.gz"
-      sha256 "cd6d787f04220fdaee674f7899ba129bb9da175d828c5682adc838fd65c83699"
+      url "https://github.com/knowns-dev/knowns/releases/download/v0.17.0/knowns-darwin-arm64.tar.gz"
+      sha256 "0fa02927d93daf3960a8bad0df2d241aac96a04209e5bd93f476959b96e00338"
     end
     on_intel do
-      url "https://github.com/knowns-dev/knowns/releases/download/v0.16.3/knowns-darwin-x64.tar.gz"
-      sha256 "8847dc88427257a1513b184351e208af680caad520055337a4f068d9f9739b04"
+      url "https://github.com/knowns-dev/knowns/releases/download/v0.17.0/knowns-darwin-x64.tar.gz"
+      sha256 "13647c3244cd38bcc067b018b021cde73c7746071218cc6621ca6d52913fd7d2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/knowns-dev/knowns/releases/download/v0.16.3/knowns-linux-x64.tar.gz"
-      sha256 "b4c8129312cf20729d282e86577faac6e8653248edfc8eb4d4f7e35d3ccfd945"
+      url "https://github.com/knowns-dev/knowns/releases/download/v0.17.0/knowns-linux-x64.tar.gz"
+      sha256 "a2b4329d4c5cc9597a740da65a6a160148f0ff2802fa63b4754087ba0cbf39ff"
     end
   end
 
