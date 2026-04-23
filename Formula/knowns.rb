@@ -1,35 +1,27 @@
 class Knowns < Formula
   desc "The memory layer for AI-native software development"
   homepage "https://knowns.sh"
-  version "0.19.2"
+  version "0.20.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/knowns-dev/knowns/releases/download/v0.19.2/knowns-darwin-arm64.tar.gz"
-      sha256 "9cbc0936c8ef90b28b42df978205d614350bd34c6d5db93c25b7542ba89457fc"
-    end
-    on_intel do
-      url "https://github.com/knowns-dev/knowns/releases/download/v0.19.2/knowns-darwin-x64.tar.gz"
-      sha256 "df42869d4611807438702654223d2f2e01da2f24af90ac7f31d831487e21f10a"
+      url "https://github.com/knowns-dev/knowns/releases/download/v0.20.0/knowns-darwin-arm64.tar.gz"
+      sha256 "1b4db786ddfa94fc60e75bf6e47ccf1bc60143508867515dba7d166520bab72a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/knowns-dev/knowns/releases/download/v0.19.2/knowns-linux-x64.tar.gz"
-      sha256 "c5b3e7a40690f5305fdd2a2dc3052612dc75a91bf0534c002190af69f8983e59"
+      url "https://github.com/knowns-dev/knowns/releases/download/v0.20.0/knowns-linux-x64.tar.gz"
+      sha256 "d60dd61c731dd6f0c853e7015c6c545db5301b8c1c24d140697dc77be4136a5e"
     end
   end
 
   def install
-    # Sidecar bundle goes into libexec so @loader_path resolves the dylib
-    # and the .node addon as siblings of knowns-embed.
-    libexec.install "knowns-embed"
+    # ONNX Runtime native lib goes into libexec so knowns can find it
     libexec.install Dir["libonnxruntime*"]
-    libexec.install "onnxruntime_binding.node" if File.exist?("onnxruntime_binding.node")
     bin.install "knowns"
-    bin.install_symlink libexec/"knowns-embed"
     bin.install_symlink "knowns" => "kn"
   end
 
